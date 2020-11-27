@@ -1,0 +1,18 @@
+import time
+ 2from threading import Thread
+ 3
+ 4# 自定义线程函数。
+ 5def main(name="Python"):
+ 6    for i in range(2):
+ 7        print("hello", name)
+ 8        time.sleep(1)
+ 9
+10# 创建线程01，不指定参数
+11thread_01 = Thread(target=main)
+12# 启动线程01
+13thread_01.start()
+14
+15
+16# 创建线程02，指定参数，注意逗号
+17thread_02 = Thread(target=main, args=("MING",))
+18# 启动线程02
